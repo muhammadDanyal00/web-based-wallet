@@ -1,0 +1,113 @@
+/* globals.css */
+:root {
+  --background: #121212;
+  --text: #ffffff;
+  --card-bg: #1e1e1e;
+  --button-bg: #4a90e2;
+  --button-hover: #357abd;
+  --private-key: #ff6b6b;
+  --mnemonic: #6bff6b;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  background-color: var(--button-bg);
+  color: var(--text);
+  border: none;
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--button-hover);
+}
+
+.mnemonic-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: var(--box-shadow);
+}
+
+.mnemonic {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.mnemonic span {
+  background-color: #333;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  font-weight: bold;
+}
+
+.wallet-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin: 10px 0;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: var(--box-shadow);
+}
+
+.private-key {
+  color: var(--private-key);
+  font-weight: bold;
+  word-break: break-all;
+}
+
+.balance {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 15px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
